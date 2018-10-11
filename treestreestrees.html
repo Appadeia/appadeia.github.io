@@ -1,0 +1,346 @@
+ <html>
+	<head>
+		<title> tree </title>
+  	<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.red-deep_orange.min.css" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="stylesheet" href="https://cdn.materialdesignicons.com/2.7.94/css/materialdesignicons.min.css">
+		<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+		<link rel="icon"
+      type="image/png"
+      href="img/blobby-favicon.png">
+		<style>
+      @import url('https://fonts.googleapis.com/css?family=Roboto:100,300');
+			@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+			@import url('https://fonts.googleapis.com/css?family=Roboto');
+::-webkit-scrollbar {
+    width: 20px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 500px;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 500px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #888;
+    border-radius: 500px;
+}
+
+      html, body {
+        cursor: url(img/default.png), auto;
+      }
+      a, button, .mdl-button, .mdl-layout__drawer-button {
+        cursor: url(img/pointer.png), auto;
+      }
+			body, .image-card__filename {
+				font-family: "Roboto script=all rev=1", 'Roboto', "Adobe Blank", sans-serif;
+				font-weight: 100;
+				font-style: normal;
+			}
+      .image-card.mdl-card#gothic {
+        width: 256px;
+        height: 256px;
+        background: url(img/gothic.jpg) center / cover; /* don't question the file name*/
+      }
+      .image-card.mdl-card#gothic:hover {
+        width: 256px;
+        height: 256px;
+        background: url(img/carbuncle.png) center / cover; /* don't question the file name*/
+      }
+      .image-card.mdl-card#gothic:hover .image-card__filename:before {
+        color: #fff;
+        font-size: 14px;
+        font-weight: 500;
+        content: "Carbuncle.";
+      }
+      .image-card.mdl-card#gothic:hover .image-card__filename {
+        color: rgba(0,0,0,0);
+        font-size: 14px;
+        font-weight: 500;
+      }
+      .image-card.mdl-card#pixel {
+        width: 256px;
+        height: 256px;
+        background: url(img/pixel.jpg) center / cover;
+      }
+      .image-card.mdl-card#alps {
+        width: 256px;
+        height: 256px;
+        background: url(img/alps.jpg) center / cover;
+      }
+      .image-card.mdl-card#wow {
+        width: 256px;
+        height: 256px;
+        background: url(img/wow.jpg) center / cover;
+      }
+      .image-card > .mdl-card__actions {
+        height: 52px;
+        padding: 16px;
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(5px); /* some juicy goodness for browsers with this enabled */
+        -webkit-backdrop-filter: blur(5px); /* iOS has joined the party */
+      }
+      .image-card__filename {
+        color: #fff;
+        font-size: 14px;
+        font-family: "Roboto script=all rev=1", 'Roboto', "Adobe Blank", sans-serif;
+				font-weight: 300;
+				font-style: normal;
+        backdrop-filter: blur(5px); /* some juicy goodness for browsers with this enabled */
+        -webkit-backdrop-filter: blur(5px); /* iOS has joined the party */
+      }
+      main {
+        margin: 15px;
+      }
+      .mdl-layout__obfuscator.is-visible {
+        backdrop-filter: blur(5px); /* some juicy goodness for browsers with this enabled */
+        -webkit-backdrop-filter: blur(5px); /* iOS has joined the party */
+      }
+      #titleheader {
+        height: 100%;
+        width: auto;
+      }
+      #drawerheader {
+        width: 100%;
+        height: auto;
+      }
+      #foot * {
+
+      }
+      #foot:hover * {
+
+      }
+      #foot {
+        transition: padding 0.5s;
+        height: 5px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        overflow: hidden;
+      }
+      #foot:before {
+        content: "Open";
+        font-size: 5px;
+        position: absolute;
+        top: 0px;
+      }
+      #foot.active {
+        height: initial;
+        padding-top: 3  2px;
+        padding-bottom: 32px;
+        transition: padding 0.5s;
+      }
+      #hover {
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+      }
+      .centerpls {
+        display: block;
+        margin: auto;
+        text-align: center;
+      }
+      #contentia {
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+      }
+      .mdl-list__item {
+        transition-duration: .28s;
+        transition-timing-function: cubic-bezier(.4,0,.2,1);
+        transition-property: background-color;
+      }
+      .mdl-list__item:hover {
+        background-color: #eee;
+        transition-duration: .28s;
+        transition-timing-function: cubic-bezier(.4,0,.2,1);
+        transition-property: background-color;
+      }
+      .mdl-layout__title, .mdl-layout-title {
+          display: block;
+          position: relative;
+          font-family: "Roboto";
+          font-size: 20px;
+          line-height: 1;
+          letter-spacing: .04em;
+          font-weight: 500;
+          box-sizing: border-box;
+      }
+      .mdl-layout-title {
+        height: 100%;
+      }
+      .mdl-layout__drawer .mdl-navigation {
+        position: absolute;
+        top: 50px;
+      }
+		</style>
+	</head>
+	<body>
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header"> <!-- The classes mdl-layout indicate that this uses MDL and it has a fixed header at the top. -->
+          <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+              <!-- Title -->
+              <span class="mdl-layout-title"><img id="titleheader" src="img/trees-header.png" alt="header"></span>
+              <!-- Add spacer, to align navigation to the right -->
+              <div class="mdl-layout-spacer"></div>
+              <!-- Navigation. We hide it in small screens. -->
+              <nav class="mdl-navigation mdl-layout--large-screen-only">
+                <a class="mdl-navigation__link" href="pumkin.html">Pumpkin Pie</a>
+                <a class="mdl-navigation__link" href="turkey.html">Turkey</a>
+                <a class="mdl-navigation__link" href="leafers.html">Leafers</a>
+                <a class="mdl-navigation__link" href="index.html"><span class="material-icons mdi mdi-home"></span></a>
+              </nav>
+            </div>
+          </header>
+          <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">Trees</span>
+            <nav class="mdl-navigation">
+              <a class="mdl-navigation__link" href="index.html"><span class="material-icons mdi mdi-home"></span> Autumn Magic</a>
+              <a class="mdl-navigation__link" href="pumkin.html">Pumpkin Pie</a>
+              <a class="mdl-navigation__link" href="turkey.html">Turkey</a>
+              <a class="mdl-navigation__link" href="leafers.html">Leafers</a>
+            </nav>
+          </div>
+          <main class="mdl-layout__content">
+            <div class="page-content">
+              <div class="mdl-grid">
+                <div class="mdl-cell mdl-cell--2-col">
+                  <div class="image-card mdl-card mdl-shadow--2dp" id="gothic">
+                    <div class="mdl-card__title mdl-card--expand"></div>
+                    <div class="mdl-card__actions">
+                      <span class="image-card__filename">Autumn Gothic</span>
+                    </div>
+                  </div>
+                    <div class="mdl-tooltip" data-mdl-for="gothic">
+                    Carbuncle
+                    </div>
+                </div>
+                <div class="mdl-cell mdl-cell--2-col">
+                  <div class="image-card mdl-card mdl-shadow--2dp" id="pixel">
+                    <div class="mdl-card__title mdl-card--expand"></div>
+                    <div class="mdl-card__actions">
+                      <span class="image-card__filename">some nice pixel art</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="mdl-cell mdl-cell--2-col">
+                      <div class="image-card mdl-card mdl-shadow--2dp" id="wow">
+                        <div class="mdl-card__title mdl-card--expand"></div>
+                        <div class="mdl-card__actions">
+                          <span class="image-card__filename">wowzers nice tree</span>
+                        </div>
+                      </div>
+                </div>
+                <div class="mdl-cell mdl-cell--4-col">
+                  <div class="image-card mdl-card mdl-shadow--2dp" id="alps">
+                    <div class="mdl-card__title mdl-card--expand"></div>
+                    <div class="mdl-card__actions">
+                      <span class="image-card__filename">swiss alps</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+                <br> <br>
+                <div id="contentia" class="">
+                  <h2>
+                    the best tree types
+                  </h2>
+                  <ul class="mdl-list">
+                    <li class="mdl-list__item mdl-list__item--three-line">
+                      <span class="mdl-list__item-primary-content">
+                        <span class="material-icons mdi mdi-tree mdl-list__item-avatar"></span>
+                        <span>acacia tree</span>
+                        <span class="mdl-list__item-text-body">
+                          a tree that basically looks like an umbrella
+                        </span>
+                      </span>
+                      <span class="mdl-list__item-secondary-content">
+                        <a class="mdl-list__item-secondary-action" href="https://www.google.com/search?q=acacia+tree" target="_blank"><i class="material-icons">open_in_new</i></a>
+                      </span>
+                    </li>
+                    <li class="mdl-list__item mdl-list__item--three-line">
+                      <span class="mdl-list__item-primary-content">
+                        <span class="material-icons mdi mdi-tree mdl-list__item-avatar"></span>
+                        <span>maple tree</span>
+                        <span class="mdl-list__item-text-body">
+                          large tree with brilliant fall colors
+                        </span>
+                      </span>
+                      <span class="mdl-list__item-secondary-content">
+                        <a class="mdl-list__item-secondary-action" href="https://www.google.com/search?q=maple+tree" target="_blank"><i class="material-icons">open_in_new</i></a>
+                      </span>
+                    </li>
+                    <li class="mdl-list__item mdl-list__item--three-line">
+                      <span class="mdl-list__item-primary-content">
+                        <span class="material-icons mdi mdi-tree mdl-list__item-avatar"></span>
+                        <span>palm trees</span>
+                        <span class="mdl-list__item-text-body">
+                          tropical trees that look very tropical
+                        </span>
+                      </span>
+                      <span class="mdl-list__item-secondary-content">
+                        <a class="mdl-list__item-secondary-action" href="https://www.google.com/search?q=palm+tree" target="_blank"><i class="material-icons">open_in_new</i></a>
+                      </span>
+                    </li>
+                    <li class="mdl-list__item mdl-list__item--three-line">
+                      <span class="mdl-list__item-primary-content">
+                        <span class="material-icons mdi mdi-tree mdl-list__item-avatar"></span>
+                        <span>oak trees</span>
+                        <span class="mdl-list__item-text-body">
+                          big trees that give lots of shade
+                        </span>
+                      </span>
+                      <span class="mdl-list__item-secondary-content">
+                        <a class="mdl-list__item-secondary-action" href="https://www.google.com/search?q=oak+tree" target="_blank"><i class="material-icons">open_in_new</i></a>
+                      </span>
+                    </li>
+                    <!--
+                    <li class="mdl-list__item mdl-list__item--three-line">
+                      <span class="mdl-list__item-primary-content">
+                        <span class="material-icons mdi mdi-tree mdl-list__item-avatar"></span>
+                        <span>spruce trees</span>
+                        <span class="mdl-list__item-text-body">
+                          winter classics
+                        </span>
+                      </span>
+                      <span class="mdl-list__item-secondary-content">
+                        <a class="mdl-list__item-secondary-action" href="https://www.google.com/search?q=spruce+tree" target="_blank"><i class="material-icons">open_in_new</i></a>
+                      </span>
+                    </li>
+                    -->
+                    <li class="mdl-list__item mdl-list__item--three-line">
+                      <span class="mdl-list__item-primary-content">
+                        <span class="material-icons mdi mdi-tree mdl-list__item-avatar"></span>
+                        <span>river birch</span>
+                        <span class="mdl-list__item-text-body">
+                          trees that are very vibrant in autumn
+                        </span>
+                      </span>
+                      <span class="mdl-list__item-secondary-content">
+                        <a class="mdl-list__item-secondary-action" href="https://www.google.com/search?q=river+birch" target="_blank"><i class="material-icons">open_in_new</i></a>
+                      </span>
+                    </li>
+                    <li class="mdl-list__item mdl-list__item--three-line">
+                      <span class="mdl-list__item-primary-content">
+                        <span class="material-icons mdi mdi-tree mdl-list__item-avatar"></span>
+                        <span>aspen</span>
+                        <span class="mdl-list__item-text-body">
+                          trees that tons of people go to the rockies to watch <br>
+                          they contrast with the green pine trees for a gorgeous view
+                        </span>
+                      </span>
+                      <span class="mdl-list__item-secondary-content">
+                        <a class="mdl-list__item-secondary-action" href="https://www.google.com/search?q=aspen+tree" target="_blank"><i class="material-icons">open_in_new</i></a>
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+            </div>
+
+          </main>
+
+        </div>
+	</body>
+ </html>

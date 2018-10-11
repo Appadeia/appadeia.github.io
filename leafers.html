@@ -1,0 +1,234 @@
+ <html>
+	<head>
+		<title> leaf </title>
+  	<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.green-orange.min.css" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+		<link rel="icon"
+      type="image/png"
+      href="img/blobby-favicon.png">
+		<style>
+      @import url('https://fonts.googleapis.com/css?family=Roboto:100,300');
+			@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+			@import url('https://fonts.googleapis.com/css?family=Roboto');
+      html, body {
+        cursor: url(img/default.png), auto;
+      }
+      a, button, .mdl-button, .mdl-layout__drawer-button {
+        cursor: url(img/pointer.png), auto;
+      }
+			body, .image-card__filename {
+				font-family: "Roboto script=all rev=1", 'Roboto', "Adobe Blank", sans-serif;
+				font-weight: 100;
+				font-style: normal;
+			}
+      .image-card.mdl-card#leaves {
+        width: 256px;
+        height: 256px;
+        background: url(img/leaves.jpg) center / cover;
+      }
+      .image-card.mdl-card#leaves:hover {
+        width: 256px;
+        height: 256px;
+        background: url(img/carbuncle.png) center / cover;
+        backdrop-filter: blur(5px); /* some juicy goodness for browsers with this enabled */
+        -webkit-backdrop-filter: blur(5px); /* iOS has joined the party */
+        background-color: #00000044;
+      }
+      .image-card.mdl-card#leaves:hover .image-card__filename:before {
+        color: #fff;
+        font-size: 14px;
+        font-weight: 500;
+        content: "Carbuncle.";
+      }
+      .image-card.mdl-card#leaves:hover .image-card__filename {
+        color: rgba(0,0,0,0);
+        font-size: 14px;
+        font-weight: 500;
+      }
+      .image-card.mdl-card#moreleaves {
+        width: 256px;
+        height: 256px;
+        background: url(img/yaymoreleaves.jpg) center / cover;
+      }
+      .image-card.mdl-card#leafers {
+        width: 256px;
+        height: 256px;
+        background: url(img/leafers.jpg) center / cover;
+      }
+      .image-card.mdl-card#notices {
+        width: 256px;
+        height: 256px;
+        background: url(img/noticeslea.jpg) center / cover;
+      }
+      .image-card > .mdl-card__actions {
+        height: 52px;
+        padding: 16px;
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(5px); /* some juicy goodness for browsers with this enabled */
+        -webkit-backdrop-filter: blur(5px); /* iOS has joined the party */
+      }
+      .image-card__filename {
+        color: #fff;
+        font-size: 14px;
+        font-weight: 500;
+        font-family: "Roboto script=all rev=1", 'Roboto', "Adobe Blank", sans-serif;
+				font-weight: 300;
+				font-style: normal;
+        backdrop-filter: blur(5px); /* some juicy goodness for browsers with this enabled */
+        -webkit-backdrop-filter: blur(5px); /* iOS has joined the party */
+      }
+      main {
+        margin: 15px;
+      }
+      .mdl-layout__obfuscator.is-visible {
+        backdrop-filter: blur(5px); /* some juicy goodness for browsers with this enabled */
+        -webkit-backdrop-filter: blur(5px); /* iOS has joined the party */
+      }
+      #titleheader {
+        height: 100%;
+        width: auto;
+      }
+      #drawerheader {
+        width: 100%;
+        height: auto;
+      }
+      #foot * {
+
+      }
+      #foot:hover * {
+
+      }
+      #foot {
+        transition: padding 0.5s;
+        height: 5px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        overflow: hidden;
+      }
+      #foot:before {
+        content: "Open";
+        font-size: 5px;
+        position: absolute;
+        top: 0px;
+      }
+      #foot.active {
+        height: initial;
+        padding-top: 3  2px;
+        padding-bottom: 32px;
+        transition: padding 0.5s;
+      }
+      #hover {
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+      }
+      #hmm {
+        
+      }
+      body {
+        background-image: url(img/leafbg-.png);
+      }
+      @import url('https://fonts.googleapis.com/css?family=Roboto:100,300');
+			@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+			@import url('https://fonts.googleapis.com/css?family=Roboto');
+			body, .image-card__filename {
+				font-family: "Roboto script=all rev=1", 'Roboto', "Adobe Blank", sans-serif;
+				font-weight: 100;
+				font-style: normal;
+			}
+			.mdl-layout__title, .mdl-layout-title {
+          display: block;
+          position: relative;
+          font-family: "Roboto";
+          font-size: 20px;
+          line-height: 1;
+          letter-spacing: .04em;
+          font-weight: 500;
+          box-sizing: border-box;
+      }
+      .mdl-layout-title {
+        height: 100%;
+      }
+      .mdl-layout__drawer .mdl-navigation {
+        position: absolute;
+        top: 50px;
+      }
+		</style>
+	</head>
+	<body>
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header"> <!-- The classes mdl-layout indicate that this uses MDL and it has a fixed header at the top. -->
+          <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+              <!-- Title -->
+              <span class="mdl-layout-title"><img id="titleheader" src="img/leafer-header.png" alt="header"></span>
+              <!-- Add spacer, to align navigation to the right -->
+              <div class="mdl-layout-spacer"></div>
+              <!-- Navigation. We hide it in small screens. -->
+              <nav class="mdl-navigation mdl-layout--large-screen-only">
+                <a class="mdl-navigation__link" href="pumkin.html">Pumpkin Pie</a>
+                <a class="mdl-navigation__link" href="turkey.html">Turkey</a>
+                <a class="mdl-navigation__link" href="treestreestrees.html">Trees</a>
+                <a class="mdl-navigation__link" href="index.html"><span class="material-icons mdi mdi-home">home</span></a>
+              </nav>
+            </div>
+          </header>
+          <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">Autumn Site</span>
+            <nav class="mdl-navigation">
+              <a class="mdl-navigation__link" href="index.html"><span class="material-icons mdi mdi-home">home</span>  Autumn Magic</a>
+              <a class="mdl-navigation__link" href="pumkin.html">Pumpkin Pie</a>
+              <a class="mdl-navigation__link" href="turkey.html">Turkey</a>
+              <a class="mdl-navigation__link" href="treestreestrees.html">Trees</a>
+            </nav>
+          </div>
+          <main class="mdl-layout__content">
+            <div class="page-content">
+              <div class="mdl-grid">
+                <div class="mdl-cell mdl-cell--2-col">
+                  <div class="image-card mdl-card mdl-shadow--2dp" id="leaves">
+                    <div class="mdl-card__title mdl-card--expand"></div>
+                    <div class="mdl-card__actions">
+                      <span class="image-card__filename">here are your leaves</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="mdl-cell mdl-cell--2-col">
+                  <div class="image-card mdl-card mdl-shadow--2dp" id="moreleaves">
+                    <div class="mdl-card__title mdl-card--expand"></div>
+                    <div class="mdl-card__actions">
+                      <span class="image-card__filename">did somebody say LEAVES?</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="mdl-cell mdl-cell--2-col">
+                      <div class="image-card mdl-card mdl-shadow--2dp" id="notices">
+                        <div class="mdl-card__title mdl-card--expand"></div>
+                        <div class="mdl-card__actions">
+                          <span class="image-card__filename">here have some leaves</span>
+                        </div>
+                      </div>
+                </div>
+                <div class="mdl-cell mdl-cell--4-col">
+                  <div class="image-card mdl-card mdl-shadow--2dp" id="leafers">
+                    <div class="mdl-card__title mdl-card--expand"></div>
+                    <div class="mdl-card__actions">
+                      <span class="image-card__filename">yet more leaves</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h1> roses are red, violets are blue </h1>
+              <hr>
+              <h2> una <strong>poema tonto</strong> por tu </h2>
+              <h3> according to the standards </h3>
+              <h4> nobody needs to &lt;close &#47;&gt; empty tags like this </h4>
+              <h5> it's an <em>xml</em> standard, not an <em>html</em> standard </h5>
+              <h6> nobody reads html documents with an xml parser </h6>
+            </div>
+
+          </main>
+
+        </div>
+	</body>
+ </html>
