@@ -1,0 +1,335 @@
+ <html>
+	<head>
+		<title> Autumn </title>
+  	<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.brown-deep_orange.min.css" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="stylesheet" href="https://cdn.materialdesignicons.com/2.7.94/css/materialdesignicons.min.css">
+		<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+		<link rel="icon"
+      type="image/png"
+      href="img/blobby-favicon.png">
+		<style>
+      @import url('https://fonts.googleapis.com/css?family=Roboto:100,300');
+			@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+			@import url('https://fonts.googleapis.com/css?family=Roboto');
+      html, body {
+        cursor: url(img/default.png), auto;
+      }
+      a, button, .mdl-button, .mdl-layout__drawer-button {
+        cursor: url(img/pointer.png), auto;
+      }
+			body, .image-card__filename {
+				font-family: "Roboto script=all rev=1", 'Roboto', "Adobe Blank", sans-serif;
+				font-weight: 100;
+				font-style: normal;
+			}
+      .image-card.mdl-card#lebanon {
+        width: 256px;
+        height: 256px;
+        background: url(img/ireland.jpg) center / cover; /* don't question the file name*/
+      }
+      .image-card.mdl-card#lebanon:hover {
+        width: 256px;
+        height: 256px;
+        background: url(img/carbuncle.png) center / cover; /* don't question the file name*/
+      }
+      .image-card.mdl-card#lebanon:hover .image-card__filename:before {
+        color: #fff;
+        font-size: 14px;
+        font-weight: 500;
+        content: "Carbuncle.";
+      }
+      .image-card.mdl-card#lebanon:hover .image-card__filename {
+        color: rgba(0,0,0,0);
+        font-size: 14px;
+        font-weight: 500;
+      }
+      .image-card.mdl-card#wall {
+        width: 256px;
+        height: 256px;
+        background: url(img/fall-from-wall.jpg) center / cover;
+      }
+      .image-card.mdl-card#autumn {
+        width: 256px;
+        height: 256px;
+        background: url(img/photo.jpg) center / cover;
+      }
+      .image-card.mdl-card#iceland {
+        width: 256px;
+        height: 256px;
+        background: url(img/iceland.jpg) center / cover;
+      }
+      .image-card > .mdl-card__actions {
+        height: 52px;
+        padding: 16px;
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(5px); /* some juicy goodness for browsers with this enabled */
+        -webkit-backdrop-filter: blur(5px); /* iOS has joined the party */
+      }
+      .image-card__filename {
+        color: #fff;
+        font-size: 14px;
+        font-weight: 500;
+        font-family: "Roboto script=all rev=1", 'Roboto', "Adobe Blank", sans-serif;
+				font-weight: 300;
+				font-style: normal;
+        backdrop-filter: blur(5px); /* some juicy goodness for browsers with this enabled */
+        -webkit-backdrop-filter: blur(5px); /* iOS has joined the party */
+      }
+      main {
+        margin: 15px;
+      }
+      .mdl-layout__obfuscator.is-visible {
+        backdrop-filter: blur(5px); /* some juicy goodness for browsers with this enabled */
+        -webkit-backdrop-filter: blur(5px); /* iOS has joined the party */
+      }
+      #titleheader {
+        height: 100%;
+        width: auto;
+      }
+      #drawerheader {
+        width: 100%;
+        height: auto;
+      }
+      #hover {
+        position: fixed;
+        bottom: 5%;
+        right: 1%;
+      }
+      #foot {
+        position: initial;
+        height: 115px;
+        padding-top: 5px;
+        padding-bottom: 0px;
+        transition: transform 0.32s;
+        transform: scale(1,0);
+        transform-origin: bottom;
+      }
+      #foot.active {
+        position: relative;
+        height: 115px;
+        padding-top: 5px;
+        padding-bottom: 0px;
+        top: 0px;
+        transition: transform 0.32s;
+        transform: scale(1,1);
+        transform-origin: bottom;
+      }
+      /*
+      #foot * {
+
+      }
+      #foot:hover * {
+
+      }
+      #foot {
+        transition: padding 0.5s;
+        height: 5px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        overflow: hidden;
+      }
+      #foot:before {
+        content: "Open";
+        font-size: 5px;
+        position: absolute;
+        top: 0px;
+      }
+      #foot.active {
+        height: initial;
+        padding-top: 3  2px;
+        padding-bottom: 32px;
+        transition: padding 0.5s;
+      }
+      #hmm {
+        
+      }*/
+      .mdl-layout__drawer>.mdl-layout__title, .mdl-layout__drawer>.mdl-layout-title {
+        padding-left: 0px;
+      }
+      @keyframes angery {
+      	0% {transform: translate(5px,5px);}
+      	50% {transform: translate(-5px,5px);}
+      	100% {transform: translate(5px, -5px);}
+      }
+      .angeryy {
+        	animation-name: angery;
+        	animation-duration: 0.1s;
+        	animation-iteration-count: infinite;
+        	animation-direction: alternate;
+      }
+      .mdl-layout__title, .mdl-layout-title {
+          display: block;
+          position: relative;
+          font-family: "Roboto";
+          font-size: 20px;
+          line-height: 1;
+          letter-spacing: .04em;
+          font-weight: 500;
+          box-sizing: border-box;
+      }
+      .mdl-mini-footer * {
+        font-size: 12pt;
+      }
+      .mdl-layout-title {
+        height: 100%;
+      }
+      .mdl-layout__drawer .mdl-navigation {
+        position: absolute;
+        top: 50px;
+      }
+      #hover {
+        transform: rotate(0);
+        transform-origin: center;
+        transition: transform 0.32s, bottom 0.32s, background-color 0.32s, color 0.32s;
+      }
+      #hover.active {
+        transform: rotate(0.5turn);
+        transform-origin: center;
+        transition: transform 0.32s, bottom 0.32s, background-color 0.32s, color 0.32s;
+        bottom: 3%;
+        background-color: rgba(64, 66, 66, 1);
+        color: white;
+        box-shadow: none;
+      }
+		</style>
+		<script>
+		  function showSources() {
+		    document.getElementById("foot").classList.add("active");
+		    document.getElementById("hover").classList.add("active");
+		    document.getElementById("hover").onclick = hideSources;
+		  }
+		  function hideSources() {
+		    document.getElementById("foot").classList.remove("active");
+		    document.getElementById("hover").classList.remove("active");
+		    document.getElementById("hover").onclick = showSources;
+		  }
+		</script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script>
+		    var batan;
+        document.onkeypress = function (e) {
+          var x = e.keyCode;
+          var y = String.fromCharCode(x);
+          if (batan == null) {
+            if (y == "k") {
+              batan = "k";
+            }
+          }
+          if (batan == "k") {
+            if (y == "a") {
+              batan = "ka";
+            }
+          }
+          if (batan == "ka") {
+            if (y == "k") {
+              batan = "kak";
+            }
+          }
+          if (batan == "kak") {
+            if (y == "u") {
+              batan = "kaku";
+            }
+          }
+          if (batan == "kaku") {
+            if (y == "n") {
+              batan = "kakun";
+              temp = document.getElementById("hmmst");
+              temp.classList.add("angeryy");
+              obfusicator = document.getElementsByClassName("mdl-layout__obfuscator");
+              var i;
+              for (i = 0; i < obfusicator.length; i++) {
+                obfusicator[i].classList.add("is-visible");
+              }
+            }
+          }
+        };
+		</script>
+	</head>
+	<body>
+        <div id="hmmst" class="mdl-layout mdl-js-layout mdl-layout--fixed-header"> <!-- The classes mdl-layout indicate that this uses MDL and it has a fixed header at the top. -->
+          <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+              <!-- Title -->
+              <span class="mdl-layout-title"><img id="titleheader" src="img/header.png" alt="header"></span>
+              <!-- Add spacer, to align navigation to the right -->
+              <div class="mdl-layout-spacer"></div>
+              <!-- Navigation. We hide it in small screens. -->
+              <nav class="mdl-navigation mdl-layout--large-screen-only">
+                <a class="mdl-navigation__link" href="pumkin.html">Pumpkins</a>
+                <a class="mdl-navigation__link" href="turkey.html">Turkey</a>
+                <a class="mdl-navigation__link" href="leafers.html">Leafers</a>
+                <a class="mdl-navigation__link" href="treestreestrees.html">Trees</a>
+              </nav>
+            </div>
+          </header>
+          <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title"><img id="drawerheader" src="img/header.png" alt="header"></span>
+            <nav class="mdl-navigation">
+              <a class="mdl-navigation__link" href="pumkin.html">Pumpkins</a>
+              <a class="mdl-navigation__link" href="turkey.html">Turkey</a>
+              <a class="mdl-navigation__link" href="leafers.html">Leafers</a>
+              <a class="mdl-navigation__link" href="treestreestrees.html">Trees</a>
+            </nav>
+          </div>
+          <main class="mdl-layout__content">
+            <div class="page-content">
+              <div class="mdl-grid">
+                <div class="mdl-cell mdl-cell--2-col">
+                  <div class="image-card mdl-card mdl-shadow--2dp" id="lebanon">
+                    <div class="mdl-card__title mdl-card--expand"></div>
+                    <div class="mdl-card__actions">
+                      <span class="image-card__filename">Laqlouq, Lebanon</span>
+                    </div>
+                  </div>
+                    <div class="mdl-tooltip" data-mdl-for="lebanon">
+                    Carbuncle
+                    </div>
+                </div>
+                <div class="mdl-cell mdl-cell--2-col">
+                  <div class="image-card mdl-card mdl-shadow--2dp" id="wall">
+                    <div class="mdl-card__title mdl-card--expand"></div>
+                    <div class="mdl-card__actions">
+                      <span class="image-card__filename">A Really Old Wall</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="mdl-cell mdl-cell--2-col">
+                      <div class="image-card mdl-card mdl-shadow--2dp" id="iceland">
+                        <div class="mdl-card__title mdl-card--expand"></div>
+                        <div class="mdl-card__actions">
+                          <span class="image-card__filename">Vestur-Skaftafellssysla, Iceland</span>
+                        </div>
+                      </div>
+                </div>
+                <div class="mdl-cell mdl-cell--4-col">
+                  <div class="image-card mdl-card mdl-shadow--2dp" id="autumn">
+                    <div class="mdl-card__title mdl-card--expand"></div>
+                    <div class="mdl-card__actions">
+                      <span class="image-card__filename">Somewhere, maybe</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h3>welcome to the autumn website</h3>
+              <p> feel free to make yourself at home here <br>
+                  we have like cookies and hot chocolate <br>
+                  ;3;
+              </p>
+            </div>
+                <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" id="hover" onclick="showSources()">
+                  <i class="material-icons" id="hovericon">keyboard_arrow_up</i>
+                </button>
+          </main>
+              <footer class="mdl-mini-footer" id="foot">
+                <div class="mdl-mini-footer__left-section">
+                  <div class="mdl-logo">
+                    Carbuncle's from puyo puyo, cursors are from <a href="https://github.com/KaizIqbal/Google_Cursor"><span class="material-icons mdi mdi-github-circle"></span>here.</a> <br>
+                    Everything else is all from <a href="https://www.reddit.com/" target="_blank"><span class="material-icons mdi mdi-reddit"></span>reddit</a> <br>
+	            You can find Rachel's site <a href="https://appadeia.github.io/rachel">here</a>
+                  </div>
+                </div>
+              </footer>
+        </div>
+	</body>
+ </html>
