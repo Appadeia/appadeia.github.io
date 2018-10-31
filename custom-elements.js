@@ -75,9 +75,10 @@ class SpookyDoot extends HTMLElement {
     super();
     this._doottall = null;
     this._dootwide = null;
+    this._doottype = null;
   }
 
-  static get observedAttributes() { return ["doottall","dootwide"]; }
+  static get observedAttributes() { return ["doottall","dootwide","doottype"]; }
 
   attributeChangedCallback(name, oldValue, newValue) {
     this._updateRendering();
@@ -98,7 +99,12 @@ class SpookyDoot extends HTMLElement {
   set dootwide(v) {
     this.dootwide("dootwide", v);
   }
-
+  get doottype() {
+    return this._doottype;
+  }
+  set doottype(v) {
+    this.doottype("doottype", v);
+  }
   _updateRendering() {
     while (this.firstChild) {
       this.removeChild(this.firstChild);
@@ -112,6 +118,15 @@ class SpookyDoot extends HTMLElement {
     if (this.getAttribute("doottall")) {
       imggie.style.height = this.getAttribute("doottall");
     }
+    switch (this.getAttribute("doottype")) {
+    case "cat":
+      imggie.setAttribute("src","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7ICbyJuSmkWWpY1AQam4fUUckVAesJFLWD2IvpWGPtIcmGGSj");
+      break;
+    default:
+      imggie.setAttribute("src","https://i.ytimg.com/vi/dos-hZtzUfE/maxresdefault.jpg");
+      break;
+    }
+    
   }
 }
 customElements.define("much-big", Bigness);
