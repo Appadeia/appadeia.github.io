@@ -69,5 +69,51 @@ class Rainbow extends HTMLElement {
     this.style.animationIterationCount = "infinite";
   }
 }
+
+class SpookyDoot extends HTMLElement {
+  constructor() {
+    super();
+    this._doottall = null;
+    this._dootwide = null;
+  }
+
+  static get observedAttributes() { return ["doottall","dootwide"]; }
+
+  attributeChangedCallback(name, oldValue, newValue) {
+    this._updateRendering();
+  }
+  connectedCallback() {
+    this._updateRendering();
+  }
+
+  get doottall() {
+    return this._doottall;
+  }
+  set doottall(v) {
+    this.doot("doottall", v);
+  }
+  get dootwide() {
+    return this._dootwide;
+  }
+  set dootwide(v) {
+    this.dootwide("dootwide", v);
+  }
+
+  _updateRendering() {
+    while (this.firstChild) {
+      this.removeChild(this.firstChild);
+    }
+    var imggie = document.createElement("img");
+    imggie.setAttribute("src","https://i.ytimg.com/vi/dos-hZtzUfE/maxresdefault.jpg");
+    this.appendChild(imggie);
+    if (this.getAttribute("dootwide")) {
+      imggie.style.width  = this.getAttribute("dootwide");
+    }
+    if (this.getAttribute("doottall")) {
+      imggie.style.height = this.getAttribute("doottall");
+    }
+  }
+}
 customElements.define("much-big", Bigness);
 customElements.define("rainbow-text", Rainbow);
+customElements.define("spooky-doot", SpookyDoot);
