@@ -122,6 +122,12 @@ class SpookyDoot extends HTMLElement {
     case "cat":
       imggie.setAttribute("src","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7ICbyJuSmkWWpY1AQam4fUUckVAesJFLWD2IvpWGPtIcmGGSj");
       break;
+    case "what":
+      imggie.setAttribute("src","https://res.cloudinary.com/teepublic/image/private/s--0tZOApie--/t_Preview/b_rgb:191919,c_limit,f_jpg,h_630,q_90,w_630/v1538519554/production/designs/3248772_0.jpg");
+      break;
+    case "meem":
+      imggie.setAttribute("src","https://meme.xyz/uploads/posts/t/l-40168-when-someone-tells-you-you-cant-make-a-spooky-version-of-every-meme-doot.jpg");
+      break;
     default:
       imggie.setAttribute("src","https://i.ytimg.com/vi/dos-hZtzUfE/maxresdefault.jpg");
       break;
