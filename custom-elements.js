@@ -130,7 +130,6 @@ class SpookyDoot extends HTMLElement {
       break;
     default:
       imggie.setAttribute("src","https://i.ytimg.com/vi/dos-hZtzUfE/maxresdefault.jpg");
-      break;
     }
     
   }
