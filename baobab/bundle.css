@@ -1739,3 +1739,5 @@ body {
     padding: 5px; }
     .baobab_data-table td:first-child, .baobab_data-table th:first-child {
       padding-left: 1%; }
+    .baobab_data-table td:nth-child(2), .baobab_data-table th:nth-child(2) {
+      padding-left: 2%; }
