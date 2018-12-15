@@ -1681,6 +1681,9 @@ a.mdc-list-item {
 .mdl-data-table__cell--non-numeric.mdl-data-table__cell--non-numeric {
   text-align: left; }
 
+.baobab_data-table {
+  text-align: left; }
+
 html {
   background-color: #ead1ff;
   min-height: 100vh; }
@@ -1713,9 +1716,26 @@ body {
   border-radius: 4px; }
 
 .mdc-typography {
-  font-family: 'Raleway', serif; }
+  font-family: 'Raleway', sans-serif; }
   .mdc-typography h1 {
-    font-family: 'Raleway', serif; }
+    font-family: 'Raleway', sans-serif; }
   .mdc-typography .mdc-top-app-bar__title {
-    font-family: 'Raleway', serif;
+    font-family: 'Raleway', sans-serif;
     font-weight: 700; }
+
+.baobab_data-table {
+  border-collapse: collapse;
+  margin: 1%;
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12); }
+  .baobab_data-table tr {
+    border: solid;
+    border-color: #c9c7c7;
+    border-width: 1px 0; }
+    .baobab_data-table tr:first-child {
+      border-top: none; }
+    .baobab_data-table tr:last-child {
+      border-bottom: none; }
+  .baobab_data-table td, .baobab_data-table th {
+    padding: 5px; }
+    .baobab_data-table td:first-child, .baobab_data-table th:first-child {
+      padding-left: 1%; }

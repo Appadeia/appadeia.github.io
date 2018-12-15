@@ -8,6 +8,8 @@
         <meta property="og:title" content="Project Baobab" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://appadeia.github.io/baobab/#title" />
+        <title>Project Baobab</title>
+        <meta name="theme-color" content="#58006E">
     </head>
     <body class="mdc-typography">
             <aside class="mdc-drawer mdc-drawer--modal">
@@ -27,6 +29,24 @@
                         </a>
                         <a class="mdc-list-item" href="#resources">
                             <span class="mdc-list-item__text">Resources</span>
+                        </a>
+                        <a class="mdc-list-item" href="#structures">
+                            <span class="mdc-list-item__text">Structures</span>
+                        </a>
+                        <a class="mdc-list-item" href="#construction">
+                            <span class="mdc-list-item__text">Construction</span>
+                        </a>
+                        <a class="mdc-list-item" href="#classes">
+                            <span class="mdc-list-item__text">Classes</span>
+                        </a>
+                        <a class="mdc-list-item" href="#builder">
+                            <span class="mdc-list-item__text">Builder</span>
+                        </a>
+                        <a class="mdc-list-item" href="#subclasses">
+                            <span class="mdc-list-item__text">Subclasses</span>
+                        </a>
+                        <a class="mdc-list-item" href="#subbuilder">
+                            <span class="mdc-list-item__text">Builder Subclasses</span>
                         </a>
                       </nav>
                     </div>
@@ -85,7 +105,7 @@
                 <div class="mdc-card baobab_pagecard">
                     <h2 id="difficulty">Difficulty</h2>
                     Some structures are naturally harder to build than others. Difficulty is a measure of that.
-                    <table class="mdl-data-table">
+                    <table class="baobab_data-table">
                         <tr>
                             <td>1</td>
                             <td class="mdl-data-table__cell--non-numeric">Just about anyone can build a structure of this difficulty level.</td>
@@ -104,7 +124,7 @@
                     <h2 id="resources">Resources</h2>
                     Resources are special items typically used in constructions. They are found either naturally or made from other resources.
                     <h3>Resource Category Table</h3>
-                    <table class="mdl-data-table">
+                    <table class="baobab_data-table">
                         <tr>
                             <td>Woods</td>
                             <td class="mdl-data-table__cell--non-numeric">Oak, Mahogany, Acacia, Spruce, Birch, Ash, Boxwood, Balsa, Ebony, Cottonwood, Elm, Gum, Hickory, Ironwood, Maple, Willow</td>
@@ -150,6 +170,169 @@
                             <td class="mdl-data-table__cell--non-numeric">Lumina, Solena, Celestine, Vodoaine</td>
                         </tr>
                     </table>
+                </div>
+                <div class="mdc-card baobab_pagecard">
+                    <h2 id="structures">Structures</h2>
+                    The Structure is a building, either small or large. Structures are split into two types: Major and Minor Structures. Major Structures are typically buildings, while Minor Structures are typically small single-purpose constructs.
+                </div>
+                <div class="mdc-card baobab_pagecard">
+                    <h2 id="construction">Construction</h2>
+                    Construction is the process of building Structures. Some classes and races are better suited to it, while others can barely perform it. Construction requires materials and people, as well as a blueprint. Construction follows patterns of checks, which are composed of lists. Some constructions require multiple people to do checks at a single time. These are typically indicated in pattern lists as checks joined by &. The DM has discretion over what tools are needed for construction. Failing a check in a chain means that some resources are wasted at the discretion of the DM, and the check needs to be redone with new resources.
+                </div>
+                <div class="mdc-card baobab_pagecard">
+                    <h1 id="classes">Classes</h1>
+                </div>
+                <div class="mdc-card baobab_pagecard">
+                    <h2 id="builder">Builder</h2>
+                    <h3>Hit Points</h3>
+                    <table class="baobab_data-table">
+                        <tr>
+                            <th class="mdl-data-table__cell--non-numeric">Hit Dice</th>
+                            <th class="mdl-data-table__cell--non-numeric">Hit Points at 1st Level</th>
+                            <th class="mdl-data-table__cell--non-numeric">Hit Points at Higher Levels</th>
+                        </tr>
+                        <tr>
+                            <td class="mdl-data-table__cell--non-numeric">1d10 per Builder Level</td>
+                            <td class="mdl-data-table__cell--non-numeric">10+Dex Modifier</td>
+                            <td class="mdl-data-table__cell--non-numeric">1d10 (Or 8) + Dex Modifier per Builder Level</td>
+                        </tr>
+                    </table>
+                    <h3>Proficiencies</h3>
+                    <table class="baobab_data-table">
+                        <tr>
+                            <td>Armor</td>
+                            <td class="mdl-data-table__cell--non-numeric">Light Armor</td>
+                        </tr>
+                        <tr>
+                            <td>Tools</td>
+                            <td class="mdl-data-table__cell--non-numeric">Masons' Tools, Woodcarvers' Tools, Tinkers' Tools, Smiths' Tools</td>
+                        </tr>
+                        <tr>
+                            <td>Weapons</td>
+                            <td class="mdl-data-table__cell--non-numeric">Simple weapons, heavy construction tools</td>
+                        </tr>
+                        <tr>
+                            <td>Saving Throws</td>
+                            <td class="mdl-data-table__cell--non-numeric">Dexterity, Strength</td>
+                        </tr>
+                        <tr>
+                            <td>Skills</td>
+                            <td class="mdl-data-table__cell--non-numeric">Choose four from: Acrobatics, Animal Handling, Athletics, Medicine, Nature, Perception, Survival</td>
+                        </tr>
+                    </table>
+                    <h3>Equipment</h3>
+                    You get this equipment in addition to the equipment provided by your background. <br>
+                    <ul>
+                        <li>(a) A light hammer or (b) a handaxe</li>
+                        <li>Pick one from: Masons’ Tools, Woodcarvers’ Tools, Tinkers’ Tools, Smiths’ Tools</li>
+                        <li>Leather armor and builders’ work clothes.</li>
+                    </ul>
+                    <table class="baobab_data-table">
+                        <tr>
+                            <th>Level</th>
+                            <th>Proficiency Bonus</th>
+                            <th>Features</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>+2</td>
+                            <td>Builder’s Practice, Architectural Intuition</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>+2</td>
+                            <td>Builder Profession</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>+2</td>
+                            <td>Civic Improvement, Construction Consistency</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>+2</td>
+                            <td>Ability Score Improvement</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>+3</td>
+                            <td>Repairing</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>+3</td>
+                            <td>Profession feature</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>+3</td>
+                            <td>Quick Station, Quality</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>+3</td>
+                            <td>Ability Score Improvement</td>
+                        </tr>
+                    </table>
+                    <h3>Builder's Practice</h3>
+                    At first level, pick one of your proficiencies with tools. Your proficiency bonus is doubled for any checks that make use of the tool.
+                    <br> <br>
+                    At 8th level, pick two more of your tool proficiencies to gain double proficiency.
+                    <br> <br>
+                    <h3>Architectural Intuition</h3>
+                    Starting at first level, knowing how structures are typically put together, you can roll a DC15 Wisdom (Perception) check to guess layout and purpose of the rooms with entries adjacent to your current room. This does not work if there is only one room with an entry adjacent to your current room.
+                    <br> <br>
+                    <h3>Builder Profession</h3>
+                    At level 2, you decide to pursue an avenue of study more specific than the one you’re on.
+                    <h4>Builder Professions</h4>
+                    <ul>
+                        <li>Siege Builder - Build large weaponry as your main form of attack.</li>
+                        <li>Environmental Builder - Take advantage of your environment when building.</li>
+                        <li>Construction Worker - Build structures with unparalleled efficiency.</li>
+                    </ul>
+                    At levels 6, 10, and 16, you get a new profession feature.
+                    <br> <br>
+                    <h3>Civic Improvement</h3>
+                    Starting at third level, you are able to make small improvements to the terrain to make passing over it easier. These include:
+                    <ol>
+                        <li>Ladders up to 10ft high</li>
+                        <li>Stairs with up to 20 steps</li>
+                        <li>Levelling uneven terrain up to 20 ft in a flat radius, excluding cliffs or other sharp changes in terrain.</li>
+                        <li>Bridges smaller than 10 feet.</li>
+                    </ol>
+                    It takes about 30 minutes and a quarter cubic foot of a material to make one of these. Success is determined by a DC14 Dexterity check.
+                    <br> <br>
+                    <h3>Construction Consistency</h3>
+                    Starting at third level, your constructions are starting to get better. Whenever you fail a pattern check while constructing something, you can roll a DC15 dexterity check to see if you can reuse all materials used in the pattern.
+                    <br> <br>
+                    <h3>Ability Score Improvement</h3>
+                    At fourth level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. You can't increase an ability score above 20 using this feature.
+                    <br> <br>
+                    You do this again at eigth, twelfth, sixteenth, and ninteenth levels.
+                    <br> <br>
+                    <h3>Repairing</h3>
+                    Starting at fitfh level, your construction ability is to the point where you can now repair existing constructions. You need materials similar to the ones that were used to construct the construction you’re repairing. For patterned constructions, you perform 2 items from the construction’s pattern. For other constructions, roll a DC15 Dexterity and a DC10 Intelligence check. Failing a check wastes some materials at DM discretion.
+                    <br> <br>
+                    <h3>Quick Station</h3>
+                    Starting at sixth level, you have enough skills to be able to set up quick workstations and disassemble them. It takes 15 minutes to assemble and 5 minutes to disassemble. You are able to build:
+                    <ul>
+                        <li>Furnace, provided you have stone and a fire source. It can smelt ores and bake foods.</li>
+                        <li>Forge, provided you have metals. It is used for tinkering with metal items.</li>
+                        <li>Workstation, provided you have wood. It is a workstation for whatever you need to do with one. Watch tinkering, scribing, whatever.</li>
+                    </ul>
+                    <br> <br>
+                    <h3>Quality</h3>
+                    Starting at level 6, the quality of your work is starting to get better. Your pattern rolls now have advantages.
+                </div>
+                <div class="baobab_pagecard mdc-card">
+                    <h1 id="subclasses">Subclasses</h1>
+                </div>
+                <div class="baobab_pagecard mdc-card">
+                    <h2 id="subbuilder">Builder Subclasses</h2>
+                    <h3>Siege Builder</h3>
+                    <h4>Quick Weapon</h4>
+                    At level 2, you are able to create a small construct out of a quarter cubic foot of any wood in about ten minutes. Ranged weapons such as guns, bows, and crossbows can be mounted on it to increase their ranges by 30/20 feet.
+                    <br> <br>
                 </div>
             </main>
     </body>
