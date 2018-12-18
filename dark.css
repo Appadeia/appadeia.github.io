@@ -1,0 +1,76 @@
+@font-face {
+  font-family: 'Product Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
+}
+input#input-1.input-element { color: white !important; }
+.black54 { color: white; }
+.slotBubble { color: white; }
+.slotBubble[disabled] {color: #aaa;}
+.item iron-icon, .item paper-icon-button, iron-icon#icon { color: white; }
+body { background-color: black; }
+.ability-mini-card, .stat-card, .healthCard, .card, .white, .item {
+  background-color: #333;
+  color: white;
+}
+.ability-mini-card *, .ability-mini-card .modifier {
+  color: white;
+}
+.paper-font-subhead, .card .bottom.list .paper-font-subhead {
+  font-family: 'Product Sans';
+  color: white;
+}
+div.spellLevel {
+  font-family: 'Product Sans';
+}
+.itemName.flex {
+	font-family: 'Product Sans'; 
+}
+.paper-font-subhead.flex {
+  font-family: 'Product Sans';
+}
+.hitPointTitle {
+  font-family: 'Product Sans';
+}
+div.top {
+	font-family: 'Product Sans';
+}
+.white.spellSlot.layout.horizontal.center {
+  padding: 1%;
+}
+.carryCapacityBar {
+  border-radius: 5px;
+}
+.flex.character-name {
+	font-family: 'Product Sans';
+  	color: white;
+}
+paper-tab {
+  font-weight: bold;
+}
+.paper-font-display1.stat {
+  font-family: 'Product Sans';
+  font-weight: bold;
+}
+.paper-font-subhead.title.flex.layout.horizontal.center {
+  font-family: 'Product Sans';
+}
+paper-material { border-radius: 10px; }
+.subhead {
+  border-radius: 10px;
+}
+paper-material.card {
+ 	border-radius: 12px; 
+}
+paper-fab {
+  	border-radius: 25%;
+}
+paper-fab:host {
+ 	border-radius: 25%; 
+}
+paper-material.card {
+	border-radius: 12px;
+  	overflow: hidden;
+}
+.input-content ::content input, .input-content ::content textarea, .input-content ::content iron-autogrow-textarea, .input-content ::content .paper-input-input { color: white !important; }
