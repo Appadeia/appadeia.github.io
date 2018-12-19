@@ -10,7 +10,7 @@ input#input-1.input-element { color: white !important; }
 .slotBubble[disabled] {color: #aaa;}
 .item iron-icon, .item paper-icon-button, iron-icon#icon { color: white; }
 body { background-color: black; }
-.ability-mini-card, .stat-card, .healthCard, .card, .white, .item, #navPanel {
+.ability-mini-card, .stat-card, .healthCard, .card, .white, .item, #navPanel paper-icon-item {
   background-color: #333;
   color: white;
 }
