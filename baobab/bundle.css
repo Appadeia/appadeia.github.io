@@ -1684,8 +1684,20 @@ a.mdc-list-item {
 .baobab_data-table {
   text-align: left; }
 
+::-webkit-scrollbar {
+  background-color: white;
+  width: 10px; }
+
+::-webkit-scrollbar-button {
+  width: 5px;
+  background-color: #00a15e; }
+
+::-webkit-scrollbar-thumb {
+  width: 3px;
+  background-color: #00d47b; }
+
 html {
-  background-color: #d1ffec;
+  background-color: #d4ffed;
   min-height: 100vh; }
 
 body {
