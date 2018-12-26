@@ -1704,6 +1704,11 @@ a {
   a:hover {
     color: #003b22; }
 
+.mdc-top-app-bar--short-collapsed {
+  border-radius: 0 0 0 0;
+  -webkit-clip-path: polygon(100% 0, 100% 74%, 76% 100%, 0 100%, 0 0);
+          clip-path: polygon(100% 0, 100% 74%, 76% 100%, 0 100%, 0 0); }
+
 html {
   background-color: #d4ffed;
   min-height: 100vh; }
@@ -1713,6 +1718,7 @@ body {
 
 .baobab_pagecard {
   line-height: 1.6;
+  border-radius: 7px;
   padding: 2%;
   margin-left: 10%;
   margin-right: 10%;
