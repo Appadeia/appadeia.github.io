@@ -10,6 +10,11 @@
 #spells paper-material:nth-child(1) {
   min-width: 15%;
 }
+@media screen and (max-width: 1300;) {
+ 	#spells paper-material:nth-child(1) {
+ 	 min-width: 20%;
+	}
+}
 ::-webkit-scrollbar {
 	width: 0;
 }
