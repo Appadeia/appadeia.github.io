@@ -4,6 +4,17 @@
   font-weight: 400;
   src: url(https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
 }
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+.spellLevelName {
+	font-family: 'Roboto Condensed', sans-serif;
+}
+.white-text .paper-font-caption {
+  	color: hsla(0,0%,100%,.54);
+  	font-family: 'Roboto Condensed', sans-serif;
+}
+#inventory > div > div:nth-child(1) paper-material div {
+  background-color: gold;
+}
 .paper-font-subhead, div.spellLevel, .itemName.flex, .paper-font-subhead.flex, .hitPointTitle, div.top, .paper-font-subhead.title.flex.layout.horizontal.center, .paper-font-display1, div.skill-mod, paper-button {
   font-family: 'Product Sans';
 }
