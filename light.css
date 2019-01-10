@@ -7,17 +7,6 @@
 .paper-font-subhead, div.spellLevel, .itemName.flex, .paper-font-subhead.flex, .hitPointTitle, div.top, .paper-font-subhead.title.flex.layout.horizontal.center, .paper-font-display1, div.skill-mod, paper-button {
   font-family: 'Product Sans';
 }
-#spells paper-material:nth-child(1) {
-  min-width: 15%;
-}
-#spells paper-material:nth-child(1) item-slot {
-  padding: 1%;
-}
-@media screen and (max-width: 1300;) {
- 	#spells paper-material:nth-child(1) {
- 	 min-width: 20%;
-	}
-}
 ::-webkit-scrollbar {
 	width: 0;
 }
