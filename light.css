@@ -10,6 +10,9 @@
 #spells paper-material:nth-child(1) {
   min-width: 15%;
 }
+#spells paper-material:nth-child(1) item-slot {
+  padding: 1%;
+}
 @media screen and (max-width: 1300;) {
  	#spells paper-material:nth-child(1) {
  	 min-width: 20%;
@@ -21,9 +24,6 @@
 div.layout.horizontal.center.end-justified {
     padding-bottom: 2%;
     padding-right: 2%;	
-}
-.white.spellSlot.layout.horizontal.center {
-  padding: 1%;
 }
 .carryCapacityBar {
   border-radius: 5px;
