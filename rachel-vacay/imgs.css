@@ -1,0 +1,40 @@
+.polar-bg {
+    background-image: url("imgs/polarbear.jpg");
+    background-size: 100%;
+}
+.lodge-bg {
+    background-image: url("imgs/cozylodge.jpg");
+    background-size: 100%;
+}
+.glflag-bg {
+    background-image: url("imgs/glflag.jpg");
+    background-origin: content-box;
+    background-position: right center;
+    background-repeat: no-repeat;
+}
+.dine-bg {
+    background-image: url("imgs/dinedine.jpg");
+    background-size: 100%;
+}
+.shop-bg {
+    background-image: url("imgs/yeeet.jpg");
+    background-size: 100%;
+}
+.transportation-bg {
+    background-image: url("imgs/Air-Greenland.jpg");
+    background-size: 100%;
+}
+.thingstd-bg {
+    background-image: url("imgs/doggo.jpg");
+    background-size: 100%;
+}
+.info-bg {
+    background-image: url("imgs/book.jpg");
+    background-size: 100%;
+}
+.icefiord {
+    background: url(https://media-cdn.tripadvisor.com/media/photo-m/1280/15/1a/0b/b8/enjoy-our-meals-with.jpg); /* 50% 50% centers image in div */
+}
+body {
+    cursor: url("imgs/tem frame 1.png"), default;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script defer src="bundle.js"></script>
+        <link rel="shortcut icon" type="image/png" href="imgs/glflagicon.png" />
+        <title>Transportation</title>
+        <link rel="stylesheet" type="text/css" href="bundle.css">
+        <link rel="stylesheet" type="text/css" href="imgs.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    </head>
+    <body>
+        <header class="mdc-top-app-bar mdc-top-app-bar--short"  id="topbar">
+            <div class="mdc-top-app-bar__row" >
+                <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start" >
+                    <a href="index.html" class="material-icons mdc-top-app-bar__navigation-icon" >arrow_back</a>
+                    <span class="mdc-top-app-bar__title" >Getting Around</span>
+                </section>
+            </div>
+        </header>
+        <div class="mdc-top-app-bar--fixed-adjust">
+            <div class="card-gallery">
+                <div class="mdc-card">
+                    <h1>Methods of Transportation</h1>
+                </div>
+                <div class="mdc-card">
+                    <h2>Map of Greenland</h2>
+                </div>
+                <div class="mdc-card">
+                    <div class="mapouter">
+                        <iframe width="600" height="900" id="gmap_canvas"
+                                src="https://maps.google.com/maps?q=nuuk%20greenland&t=&z=11&ie=UTF8&iwloc=&output=embed" frameborder="0"
+                                scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                    </div>
+                </div>
+                <div class="mdc-card shop">
+                    <h1>Flying to and from Greenland</h1>
+                    <img src="http://aviationtribune.com/wp-content/uploads//2017/03/03-airgreenland-a330200-TisMeyer.jpg">
+                    <p>
+                        The views are fabulous when travelling from town to town in Greenland and the journey is an experience in
+                        itself.
+                        There are no roads between the towns in Greenland and as the distances are large, the vast majority of traffic
+                        from town to town is with Air Greenland and their Dash 8-200 aircraft. There is room for 37 passengers and the
+                        planes fly so low that you have a magnificent view and you can see Greenland from above on the journey.
+                    </p>
+                    <div class="mdc-card__actions">
+                        <a href="https://www.airgreenland.com/" class="mdc-button mdc-card__action mdc-button--raised mdc-card__action--button">
+                            <span class="mdc-button__label">Check out Air Greenland</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="mdc-card shop">
+                    <h1>Greenland by Ferry</h1>
+                    <img src="https://visitgreenland.com/wp-content/uploads/2017/01/the-greenland-passenger-ferry-in-the-sunset-near-ilulissat-ice-fjord.jpg">
+                    <p>
+                        Greenland's ferries are a stylish way to get around Greenland. The Artic Umiaq line goes through around a dozen cities
+                        from Ilulissat in the north to Qaqortoq in the south. There are two types of overnight ferries: cabins and couchettes. 
+                        Cabins have private bathrooms as well as a table, chair, TV, wardrobe, and other amenities. Couchettes are cheaper, but have
+                        shared bathrooms and up to eight berths per section. Most passengers bring sleeping bags.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
