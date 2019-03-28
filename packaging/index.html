@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Home</title>
+        <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="bundle.js"></script>
+        <link rel="stylesheet" type="text/css" href="bundle.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    </head>
+
+    <body class="desktop">
+        <header class="mdc-top-app-bar mdc-top-app-bar--prominent">
+            <div class="mdc-top-app-bar__row">
+                <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+                    <span class="mdc-top-app-bar__title">Packaging How-To</span>
+                </section>
+            </div>
+        </header>
+        <div class="homepage-gallery mdc-top-app-bar--prominent-fixed-adjust">
+            <div class="mdc-card hp-card" id="rpm">
+                <div class="nonexpanded">
+                    <h1>RPM Packaging</h1>
+                    <p>The packaging format of choice for RPM-based distros like openSUSE and Fedora.</p>
+                </div>
+                <div class="expanded">
+                    <h1>RPM Packaging</h1>
+                    <p>To get started with RPM packaging, you need to write a specfile. Specfiles have many components.
+                    </p>
+                    <h2>Step 0 - Making a specfile</h2>
+                    <p>Make a file named <span code>packagename.spec</span>.</p>
+                    <h2>Step 1 - Name</h2>
+                    <p>Add a line starting with <span code>Name:</span> and put the name of your package into it.</p>
+                    <p>It should look something like <span code>Name: packagename</span>.</p>
+                    <h2>Step 2 - Versioning</h2>
+                    <p>Next you'll want to give your package a version. You should base this number off of the version
+                        of the program you're packaging.</p>
+                    <p>Use <span code>Version: </span> combined with a number to give your package a version number.</p>
+                    <p>It should look something like <span code>Version: 0.0.1</span></p>
+                    <h2>Step 3 - Dependencies</h2>
+                    <p>You'll want to specify dependencies now. There are three types.</p> <br>
+                    <p><span code>BuildRequires: </span>Dependencies required to build your program.</p> <br>
+                    <p><span code>Requires: </span>Dependencies that your program needs to run.</p> <br>
+                    <p><span code>Recommends: </span>Dependencies that would be nice to have but are not required.</p>
+                    <h2>Step 4 - Description</h2>
+                    <p>After all your basics are done, you can get onto the sections of a package now. The first one is
+                        the description.</p>
+                    <p>Add a line with only <span code>%description</span> on it. The lines after it will be considered
+                        part of the description, unless they are in other sections.</p>
+                    <h2>Step 5 - Preparation</h2>
+                    <p>For the most part, you only want to add the following lines to your specfile for preparation.</p>
+                    <p><span code>%prep<br>%setup -q</span></p>
+                    <h2>Step 6 - Building</h2>
+                    <p>Add a line with <span code>%build</span> on it.</p>
+                    <p>This is the most complicated part of the process. You'll want to run all the commands to build
+                        your program here. You'll want to use the <span code>%{buildroot}</span> <span
+                            code>%{_bindir}</span> and <span code>%{_datadir}</span> directives here in place of your
+                        usual directories for building.</p>
+                    <h2>Step 7 - Installation</h2>
+                    <p>Add a line with <span code>%install</span> on it.</p>
+                    <p>This is where you'll want to move the compiled program to where they would be in a user's system,
+                        using the above build directives.</p>
+                    <h2>Step 8 - File Listing</h2>
+                    <p>Add a line with <span code>%files</span> on it.</p>
+                    <p>This is where you want to list files, one per line. Use the above build directives as per usual.
+                    </p>
+                    <h2>Step 9 - Changelog</h2>
+                    <p>Add a line with <span code>%changelog</span> on it.</p>
+                    <p>Lines after this will be considered part of the changelog.</p>
+                    <h2>You're done!</h2>
+                    <p>This is when you can use a service like the OBS or Copr to build & host your package, or you
+                        build it locally.</p>
+                    <br><br>
+                </div>
+                <div class="mdc-card__actions">
+                    <button id="rpm-btn"
+                        class="mdc-button mdc-card__action mdc-card__action--button mdc-button--raised	">
+                        <span class="mdc-button__label">How To Use</span>
+                    </button>
+                </div>
+            </div>
+            <div class="mdc-card hp-card" id="arch">
+                <div class="nonexpanded">
+                    <h1>Arch Packaging</h1>
+                    <p>The packaging format for Arch Linux et al.</p>
+                </div>
+                <div class="expanded">
+                    <h1>Arch Packaging</h1>
+                    <p>To get started with packaging for Arch Linux, make a file called <span code>PKGBUILD</span>.</p>
+                    <h2>Packaging Information</h2>
+                    <p>PKGBUILDs are just plain ol' Bash. Keep this in mind.</p>
+                    <h2>Package Metadata</h2>
+                    <p>
+                        <table>
+                            <tr>
+                                <th>Variable</th>
+                                <th>Function</th>
+                            </tr>
+                            <tr>
+                                <td>pkgname</td>
+                                <td>The name of your package.</td>
+                            </tr>
+                            <tr>
+                                <td>pkgver</td>
+                                <td>The version of your package.</td>
+                            </tr>
+                            <tr>
+                                <td>pkgrel</td>
+                                <td>The build version of your package.</td>
+                            </tr>
+                            <tr>
+                                <td>arch</td>
+                                <td>The architecture of your package. Only use <span code>arch=('any')</span> or <span
+                                        code>arch=('x86_64')</span> here.</td>
+                            </tr>
+                            <tr>
+                                <td>license</td>
+                                <td>The license of your project. You'll want to check the types available at the <a
+                                        href="https://wiki.archlinux.org/index.php/PKGBUILD#license">Arch Wiki</a>.</td>
+                            </tr>
+                            <tr>
+                                <td>depends</td>
+                                <td>An array of packages that your package needs.</td>
+                            </tr>
+                            <tr>
+                                <td>optdepends</td>
+                                <td>Packages that would be nice to have, but are not required.</td>
+                            </tr>
+                            <tr>
+                                <td>makedepends</td>
+                                <td>Packages needed to make the package but not run the package.</td>
+                            </tr>
+                            <tr>
+                                <td>md5sums</td>
+                                <td>The md5 sums of your source files.</td>
+                            </tr>
+                        </table>
+                    </p>
+                    <h2>Package Functions</h2>
+                    <p>You'll want to define these functions to make your package.</p>
+                    <p>
+                        <table>
+                            <tr>
+                                <td>prepare()</td>
+                                <td>Function that runs commands to prepare sources for building. Not required.</td>
+                            </tr>
+                            <tr>
+                                <td>pkgver()</td>
+                                <td>Function that runs commands to set the package version. Great for git packages. Not
+                                    required.</td>
+                            </tr>
+                            <tr>
+                                <td>build()</td>
+                                <td>Function that runs the commands to build your package. Not required.</td>
+                            </tr>
+                            <tr>
+                                <td>check()</td>
+                                <td>Function that checks the integrity of your package. Not required.</td>
+                            </tr>
+                            <tr>
+                                <td>package()</td>
+                                <td>The final step in any package. Puts all the compiled files where they need to go.
+                                    Required.</td>
+                            </tr>
+                        </table>
+                    </p>
+                    <h2>Notes</h2>
+                    <p>When in doubt, check the Arch Wiki.</p>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+                <div class="mdc-card__actions">
+                    <button id="arch-btn"
+                        class="mdc-button mdc-card__action mdc-card__action--button mdc-button--raised	">
+                        <span class="mdc-button__label">How To Use</span>
+                    </button>
+                </div>
+            </div>
+            <div class="mdc-card hp-card" id="snap">
+                <div class="nonexpanded">
+                    <h1>Snap Packaging</h1>
+                    <p>A universal packaging format that claims to work across all distros. It's run by Canonical.</p>
+                </div>
+                <div class="expanded">
+                    <h1>Snap Packaging</h1>
+                    <p>To get ready to package snaps, you need <span code>snapd</span>.</p>
+                    <h2>Installing Snapcraft</h2>
+                    <p>You'll want to run <span code>sudo snap install --classic snapcraft</span>.</p>
+                    <h2>Initialization</h2>
+                    <p>Make a directory. This directory will be where you build your snap.</p>
+                    <p>Navigate to your directory, and then run <span code>snapcraft init</span>. This will set up your
+                        directory.</p>
+                    <p>Your directory should have a folder called <span code>snap</span> with a file called <span
+                            code>snapcraft.yaml</span> inside it.</p>
+                    <h2>The YAML file</h2>
+                    <p>
+                        The <span code>snapcraft.yaml</span> file will be generated with multiple properties. <br>
+                        Here's what they mean: <br>
+                    </p>
+                    <p>
+                        <span code>name:</span> The name of the snap. <br>
+                        <span code>version:</span> The version of the snap. <br>
+                        <span code>summary:</span> A short, one-line summary of your snap. <br>
+                        <span code>description:</span> A longer description of the snap. <br>
+                        <span code>grade:</span> Indication of quality confidence. <br>
+                        <span code>confinement:</span> How much you want your snap to be confined. Can be either
+                        'devmode', 'strict', or 'classic'
+                    </p>
+                    <h2>Parts</h2>
+                    <p>Snap builds packages using "parts." Parts have two key components: <span code>source</span> and
+                        <span code>plugin</span>. Source is the what, plugin is the how.
+                    </p>
+                    <p>For example, you can have a part named <span code>gnu-hello</span> with the <span
+                            code>source</span> of <span code>http://ftp.gnu.org/gnu/hello/hello-2.10.tar.gz</span> and
+                        the plugin of <span code>autotools</span>.
+                    </p>
+                    <p>Such a parts format would look like this for GNU Hello:</p>
+                    <pre><span code>
+parts:
+    gnu-hello:
+        source: http://ftp.gnu.org/gnu/hello/hello-2.10.tar.gz
+        plugin: autotools</span></pre>
+                    <h2>Exposing services</h2>
+                    <p>In order to run anything from a snap, you need to expose them. Exposing a command is pretty
+                        painless.</p>
+                    <p>For example, here's how GNU Hello would be exposed.</p>
+                    <pre><span code>
+apps:
+    hello:
+        command: bin/hello</span></pre>
+                    <h2>Getting ready to publish</h2>
+                    <p>You'll want to make sure that <span code>confinement</span> is set to <span code>strict</span>
+                        and that your snap works under this confinement. After this, you can get ready to push to the
+                        store.
+                    </p>
+                    <h2>Publishing</h2>
+                    <p>You'll want to get yourself a Ubuntu One account. Afterwards, run <span code>snapcraft
+                            login</span>.</p>
+                    <p>Before uploading a snap, you'll want to register a name.</p>
+                    <p>Run <span code>snapcraft register &lt;name&gt;</span> to register your snap under its name.</p>
+                    <p>Be sure that your snap has the same name you registered and that its <span code>grade</span> is
+                        <span code>stable</span>.</p>
+                    <p>After everything's ready and you have a built snap, you'll want to run <span code>snapcraft push
+                            snapnamehere.snap --release=candidate</span></p>
+                    <p>Once you have pushed it, you should get an email telling you that your snap is in testing.</p>
+                    <p>After testing is done and you're happy with your snap, run <span code>snapcraft release name
+                            revision channel</span>.</p>
+                    <h2>More Information</h2>
+                    <p>You can get more information from the <a
+                            href="https://docs.snapcraft.io/snap-documentation/3781">documentation</a>.</p>
+                    <br><br>
+                </div>
+                <div class="mdc-card__actions">
+                    <button id="snap-btn"
+                        class="mdc-button mdc-card__action mdc-card__action--button mdc-button--raised	">
+                        <span class="mdc-button__label">How To Use</span>
+                    </button>
+                </div>
+            </div>
+            <div class="mdc-card hp-card" id="flatpak">
+                <div class="nonexpanded">
+                    <h1>Flatpak Packaging</h1>
+                    <p>A sandboxed packaging format.</p>
+                </div>
+                <div class="expanded">
+                    <h1>Flatpak Packaging</h1>
+                    <p>Before packaging flatpaks, you'll want to make sure you have an SDK for your Flatpak runtime.</p>
+                    <h2>Your First Flatpak</h2>
+                    <p>Get started by creating a simple application that will be packaged. Call this file <span
+                            code>hello.sh</span>.</p>
+                    <pre><span code>
+#!/bin/sh
+echo "Hello world, from a sandbox"
+</span></pre>
+                    <h2>Add a manifest</h2>
+                    <p>Flatpaks are built using manifests which describe information about the application and how it is
+                        built. To add a manifest to your application, add this to an empty file:
+                    </p>
+                    <pre><span code>
+{
+    "app-id": "org.flatpak.Hello",
+    "runtime": "org.freedesktop.Platform",
+    "runtime-version": "18.08",
+    "sdk": "org.freedesktop.Sdk",
+    "command": "hello.sh",
+    "modules": [
+        {
+            "name": "hello",
+            "buildsystem": "simple",
+            "build-commands": [
+                "install -D hello.sh /app/bin/hello.sh"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "path": "hello.sh"
+                }
+            ]
+        }
+    ]
+}
+</span></pre>
+                    <p>
+                        Save this alongside <span code>hello.sh</span> and call it <span
+                            code>org.flatpak.Hello.json</span>.
+                    </p>
+                    <p>
+                        In a more complex application, the manifest would list multiple modules. The last one would be
+                        the application and earlier ones would be dependencies needed to run the application.
+                    </p>
+                    <h2>Building the application</h2>
+                    <p>Now that your app has a manifest, use <span code>flatpak-builder</span> to build the application.
+                    </p>
+                    <p>For our example, run <span code>flatpak-builder build-dir org.flatpak.Hello.json</span>. This
+                        will build your application and put it inside <span code>build-dir</span>.</p>
+                    <h2>Testing</h2>
+                    <p>Make sure that the application runs by running <span code>flatpak-builder --run build-dir
+                            org.flatpak.Hello.json hello.sh</span>.</p>
+                    <h2>Repository</h2>
+                    <p>In order to install and run the app, it must be inside a repository. Add the <span
+                            code>--repo</span> flag and pass the name of the repo.</p>
+                    <p>For our example, we would run <span code>flatpak-builder --repo=repo --force-clean build-dir org.flatpak.Hello.json</span>.</p>
+                    <p>(The <span code>--force-clean</span> flag deletes everything inside build-dir before building)</p>
+                    <h2>Installation</h2>
+                    <p>Now we're ready to add the local repository and install the app. This is done with two commands.</p>
+                    <p><span code>flatpak --user remote-add --no-gpg-verify tutorial-repo repo</span></p>
+                    <p><span code>flatpak --user install tutorial-repo org.flatpak.Hello</span></p>
+                    <p>The first command adds the repository, and the second command installs the flatpak from the repository.</p>
+                    <h2>Running</h2>
+                    <p>All that's left is to run the application.</p>
+                    <p>Run <span code>flatpak run org.flatpak.Hello</span>.</p>
+                    <h2>More Information</h2>
+                    <p>Head to <a href="http://docs.flatpak.org/en/latest/building.html">flatpak.org</a> to get more information.</p>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+                <div class="mdc-card__actions">
+                    <button id="flatpak-btn"
+                        class="mdc-button mdc-card__action mdc-card__action--button mdc-button--raised	">
+                        <span class="mdc-button__label">How To Use</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
